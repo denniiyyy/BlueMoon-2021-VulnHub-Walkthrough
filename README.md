@@ -65,12 +65,16 @@ gobuster dir -u http://192.168.56.101 -w /usr/share/wordlists/dirbuster/director
 ## Step 5 — Explore Hidden Directory
 
 - Go to `http://192.168.56.101/hidden_text`
+
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/hidden.png)
 - Click the **"Thank you…"** link
 - A **QR code image** will appear — download it
+
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/qr.png)
+
 Decode the QR code at [https://zxing.org/w/decode.jspx](https://zxing.org/w/decode.jspx)
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/decode.png)
+
 **Credentials found:**
 ```
 USER: userftp
@@ -85,6 +89,7 @@ PASSWORD: ftpp@ssword
 ftp 192.168.56.101
 ```
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/ftp.png)
+
 List and download files:
 
 ```bash
@@ -93,12 +98,14 @@ get information.txt
 get p_lists.txt
 ```
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/getftp.png)
+
 Read the files:
 
 ```bash
 cat information.txt
 ```
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/catinformation.png)
+
 ```bash
 cat p_lists.txt
 ```
