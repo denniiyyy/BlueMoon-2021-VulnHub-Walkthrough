@@ -46,7 +46,7 @@ nmap 192.168.56.101
 
 ---
 
-## Step 4 — Web Enumeration
+## Step 4 — Web HTTP
 
 Visit `http://192.168.56.101` in your browser. Nothing useful found.
 
