@@ -37,6 +37,7 @@ nmap -sP 192.168.56.0/24
 nmap 192.168.56.101
 ```
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/searchopenport.png)
+
 **Open ports found:**
 | Port | Service |
 |------|---------|
@@ -50,6 +51,7 @@ nmap 192.168.56.101
 
 Visit `http://192.168.56.101` in your browser. Nothing useful found.
 ![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/http.png)
+
 Run Gobuster to find hidden directories:
 
 ```bash
