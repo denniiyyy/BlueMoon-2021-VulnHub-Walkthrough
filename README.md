@@ -141,7 +141,7 @@ ssh robin@192.168.56.101
 ls -l
 cat user1.txt
 ```
-![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/24e41d391320c45043af5286933cd4dc68d077ce/images/sshuser1.txt.png)
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/24798571cf2ffb73aea654a2e791f06b43d77466/images/catuser1.txt.png)
 > 🚩 **Flag 1 obtained!**
 
 ---
