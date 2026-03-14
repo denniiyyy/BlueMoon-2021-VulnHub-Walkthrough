@@ -136,12 +136,12 @@ Password: k4rv3ndh4nh4ck3r
 ```bash
 ssh robin@192.168.56.101
 ```
-![alt text]()
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/24e41d391320c45043af5286933cd4dc68d077ce/images/ssh.png)
 ```bash
 ls -l
 cat user1.txt
 ```
-![alt text]()
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/24e41d391320c45043af5286933cd4dc68d077ce/images/sshuser1.txt.png)
 > 🚩 **Flag 1 obtained!**
 
 ---
@@ -151,14 +151,19 @@ cat user1.txt
 ```bash
 sudo -l
 ```
-
-> `feedback.sh` can be run as user **jerry**
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/24e41d391320c45043af5286933cd4dc68d077ce/images/sudo-l.png)
 
 ```bash
 cd project
 ls
 cat feedback.sh
 ```
+
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/d14b8aacf0a53f334131b22b3ca0bad2d8d6225a/images/project.png)
+
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/d14b8aacf0a53f334131b22b3ca0bad2d8d6225a/images/catfeedback.png)
+
+> `feedback.sh` can be run as user **jerry**
 
 Run the script as jerry:
 
@@ -176,6 +181,8 @@ cd /home/jerry
 ls
 cat user2.txt
 ```
+
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/d14b8aacf0a53f334131b22b3ca0bad2d8d6225a/images/feedback.png)
 
 > 🚩 **Flag 2 obtained!**
 
