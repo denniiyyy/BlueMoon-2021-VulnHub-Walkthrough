@@ -62,7 +62,7 @@ gobuster dir -u http://192.168.56.101 -w /usr/share/wordlists/dirbuster/director
 
 ## Step 5 — Explore Hidden Directory
 
-- Go to `http://192.168.56.107/hidden_text`
+- Go to `http://192.168.56.101/hidden_text`
 - Click the **"Thank you…"** link
 - A **QR code image** will appear — download it
 
@@ -79,7 +79,7 @@ PASSWORD: ftpp@ssword
 ## Step 6 — Login via FTP
 
 ```bash
-ftp 192.168.56.107
+ftp 192.168.56.101
 ```
 
 List and download files:
@@ -123,7 +123,7 @@ ssh robin@192.168.56.101
 ```
 
 ```bash
-ls -al
+ls -l
 cat user1.txt
 ```
 
