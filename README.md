@@ -17,7 +17,7 @@ A step-by-step lab guide for the BlueMoon 2021 VulnHub machine.
 ifconfig
 ```
 
-> Note your attacker machine's IP address.
+> Note your attacker machine's IP address (`192.168.56.102`)
 
 ---
 
@@ -202,6 +202,4 @@ cat root.txt
 ```
 
 > 🚩 **Root flag obtained! Machine pwned!**
-
----
 
