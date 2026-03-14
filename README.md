@@ -24,7 +24,7 @@ ifconfig
 ## Step 2 — Discover Target on Network
 
 ```bash
-nmap -sn 192.168.56.0/24
+nmap -sP 192.168.56.0/24
 ```
 
 > Identify the BlueMoon machine IP (`192.168.56.101`)
