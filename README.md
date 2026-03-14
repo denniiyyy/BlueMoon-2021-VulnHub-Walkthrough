@@ -16,7 +16,7 @@ A step-by-step lab guide for the BlueMoon 2021 VulnHub machine.
 ```bash
 ifconfig
 ```
-
+![alt text](https://github.com/denniiyyy/BlueMoon-2021-VulnHub-Walkthrough/blob/c13ea1826b0490f5555b3b6f1c0d2ff1b79e3cc6/images/ifconfig.png)
 > Note your attacker machine's IP address (`192.168.56.102`)
 
 ---
